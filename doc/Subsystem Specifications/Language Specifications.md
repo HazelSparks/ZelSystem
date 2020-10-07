@@ -37,3 +37,26 @@ level of modification allowed by Scheme. This will put even the language itself
 into the hands of user customization.
 
 #### Malleable Execution Model
+As for the method to provide the above specifications, it is required that the
+execution model of ZLang be global and able to be modified in real time by the
+program under execution. In addition, a level of safety must be established so
+a program isn't able to cause a hang or halt. Furthermore, a level of modularity
+should be provided so saved execution models can be loaded with a single function
+call.
+
+#### Modular Environment
+As specified in the execution model table, the ambient environment of ZLang must
+be able to be modified with single function calls, exported, imported, and
+otherwise changed. This includes variable namespaces, function tables, and syntax
+trees during interpretation.
+
+### Language Design
+#### Structures
+There are two types of variables in ZLang, atoms and lists. A list contains
+variables, and can include other lists. The way this will be represented in
+Python is with a dictionary **var_table**, whose entries will all have the
+structure "(var_name, var_type) : var_value". The function to define new
+variables is **define**, and it is used with the syntax **(define var_name
+var_value)** which will have its type inferred by the structure of the value.
+ZLang will have built-in two special constants, *T* and *F*, which are atoms
+representing boolean values.
