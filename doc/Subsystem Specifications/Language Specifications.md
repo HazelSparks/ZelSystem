@@ -1,5 +1,5 @@
-# ZelSystem Documentation
-## Language Specifications
+# ZelSystem 
+## Document 2a: Language Specifications
 
 The language of the ZelSystem, ZLang, will be used inside the REPL, Interpreter,
 API, and environment subsystems. As such, it must be precisely and carefully

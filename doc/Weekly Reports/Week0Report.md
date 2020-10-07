@@ -11,7 +11,9 @@ documentation directory to allow for enhanced scalability.
 
 # Day 2: Tuesday 6, Oct 2020 3:00-4:00
 Created and configured a git repository, and linked it to GitHub. Began work on
-the specification of the language. Worked on directory structure.
+the specification of the language. Worked on directory structure. Chose Python
+as the development language, and created documentation for a language change.
 
 ## Note for Tomorrow
-Extend language specification documents, extend general specifications
+Extend language specification documents, extend general specifications for the
+planning of ZelSystem.
