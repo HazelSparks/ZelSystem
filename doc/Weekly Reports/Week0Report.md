@@ -21,3 +21,10 @@ planning of ZelSystem.
 # Day 3: Wednesday 7, Oct 2020 5:30-6:30pm
 Created a general specification for the sub-systems, and extended language 
 specification.
+
+# Day 4: Thursday 8, Oct 2020 6:00-7:00pm
+Heavily extended language specification and added the first example program. 
+
+## Note for Tomorrow
+Concretely flesh out the model of ZLang in the Model documentation
+

@@ -56,7 +56,62 @@ There are two types of variables in ZLang, atoms and lists. A list contains
 variables, and can include other lists. The way this will be represented in
 Python is with a dictionary **var_table**, whose entries will all have the
 structure "(var_name, var_type) : var_value". The function to define new
-variables is **define**, and it is used with the syntax **(define var_name
-var_value)** which will have its type inferred by the structure of the value.
-ZLang will have built-in two special constants, *T* and *F*, which are atoms
-representing boolean values.
+variables is **define**, and it is used with the syntax
+**(define var_name var_value)** which will have its type inferred by the
+structure of the value. ZLang will have built-in two special constants, **T** and
+**F**, which are atoms representing boolean values. Furthermore, additional lists
+can be constructed using the **cons** function, to which reference will be made
+to MIT Scheme. There will exist a table similar to the variable namespace
+described above which stores functions and their names. This will be denoted as
+the function namespace.
+
+#### Exhaustive List of Functions and Primitives (subject to change)
+- (), the empty list
+- **T**, the boolean truth value
+- **F**, the boolean false value
+- atom?, returns true if the value is an atom
+- car, returns the first element of a non-empty list
+- cdr, returns the remaining elements of a decapitated non-empty list
+- cons, places a value at the tail-end of a list
+- null?, returns true if the value is the empty list
+- ver, short for verbatim, returns whatever it is passed without evaluation
+- lambda, substitutes arbitrary values into specific places
+- cond, branches execution based on a boolean value
+- devar, defines a variable with a value
+- defun, defines a function with a value containing lambda
+- eq?, returns true if the two values are equal
+
+#### Function Execution Syntax
+The evaluation syntax for ZLang is as follows
+
+(func val1 val2 val3 ... valn)
+
+for a function of n variables. Do note that functions can be passed as values.
+
+#### Example Program
+(defun lat?
+       (lambda (l)
+       	       (cond
+		((null? l) **T**)
+		((atom? (car l)) (lat? (cdr l)))
+		(else **F**))))
+
+(defun contains?
+       (lambda (lat a)
+       	       (cond
+		((null? lat) **F**)
+		((eq? (car lat) a) **T**)
+		(else (contains? (cdr lat) a)))))
+
+(devar testlist '(a b c d e f))
+
+(lat? testlist)
+(contains? testlist a)
+(contains? testlist z)
+
+This program should output
+**T**
+**T**
+**F**
+
+by consultation with the primitives used.
