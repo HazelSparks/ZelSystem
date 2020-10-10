@@ -28,3 +28,12 @@ Heavily extended language specification and added the first example program.
 ## Note for Tomorrow
 Concretely flesh out the model of ZLang in the Model documentation
 
+# Day 5: Friday 9, Oct 2020 11:00-12:00am
+Extended language documentation further, and explained some core concepts, while 
+revising the model of the language, and correcting some errors
+
+
+# END OF WEEK 0
+## Total Time Completed: 5 Hours
+## Size of Project: 110kb
+## Sub-Systems Complete: 0

@@ -61,9 +61,7 @@ variables is **define**, and it is used with the syntax
 structure of the value. ZLang will have built-in two special constants, **T** and
 **F**, which are atoms representing boolean values. Furthermore, additional lists
 can be constructed using the **cons** function, to which reference will be made
-to MIT Scheme. There will exist a table similar to the variable namespace
-described above which stores functions and their names. This will be denoted as
-the function namespace.
+to MIT Scheme.
 
 #### Exhaustive List of Functions and Primitives (subject to change)
 - (), the empty list
@@ -77,8 +75,7 @@ the function namespace.
 - ver, short for verbatim, returns whatever it is passed without evaluation
 - lambda, substitutes arbitrary values into specific places
 - cond, branches execution based on a boolean value
-- devar, defines a variable with a value
-- defun, defines a function with a value containing lambda
+- define, defines a variable with a list or an atom
 - eq?, returns true if the two values are equal
 
 #### Function Execution Syntax
@@ -89,21 +86,21 @@ The evaluation syntax for ZLang is as follows
 for a function of n variables. Do note that functions can be passed as values.
 
 #### Example Program
-(defun lat?
+(define lat?
        (lambda (l)
        	       (cond
 		((null? l) **T**)
 		((atom? (car l)) (lat? (cdr l)))
 		(else **F**))))
 
-(defun contains?
+(define contains?
        (lambda (lat a)
        	       (cond
 		((null? lat) **F**)
 		((eq? (car lat) a) **T**)
 		(else (contains? (cdr lat) a)))))
 
-(devar testlist '(a b c d e f))
+(define testlist (a b c d e f))
 
 (lat? testlist)
 (contains? testlist a)
@@ -115,3 +112,14 @@ This program should output
 **F**
 
 by consultation with the primitives used.
+
+#### Theory and Syntax
+The most important thing to take away from the construction of ZLang is that
+functions are lists. The second is that lambda is nothing more than a search and
+replace for variables. The third is that ZLang's execution model simply repeats
+evaluation until the **car** of the list is **ver** or is not in the namespace.
+This is one of the things that has enamoured Scheme and Lisp programmers since
+the inception of the language. Likewise, our head developer has Lisp fever, so
+she opted for a simple primitive environment that would be easy to code, "that
+the Lisp-gifted among us might flourish with this drop in the ever-expanding 
+basin." She has lost her mind entirely. 
