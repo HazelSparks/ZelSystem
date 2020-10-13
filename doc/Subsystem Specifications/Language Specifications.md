@@ -77,6 +77,8 @@ to MIT Scheme.
 - cond, branches execution based on a boolean value
 - define, defines a variable with a list or an atom
 - eq?, returns true if the two values are equal
+- warning, returned in the case of a non-critical error
+- error, returned in the case of a critical error
 
 #### Function Execution Syntax
 The evaluation syntax for ZLang is as follows
@@ -100,7 +102,7 @@ for a function of n variables. Do note that functions can be passed as values.
 		((eq? (car lat) a) **T**)
 		(else (contains? (cdr lat) a)))))
 
-(define testlist (a b c d e f))
+(define testlist '(a b c d e f))
 
 (lat? testlist)
 (contains? testlist a)
@@ -122,4 +124,6 @@ This is one of the things that has enamoured Scheme and Lisp programmers since
 the inception of the language. Likewise, our head developer has Lisp fever, so
 she opted for a simple primitive environment that would be easy to code, "that
 the Lisp-gifted among us might flourish with this drop in the ever-expanding 
-basin." She has lost her mind entirely. 
+basin." She has lost her mind entirely. Given this stance, we are only going to
+implement the above primitives in Python, and implement the remainder of the
+language in this primitive ZLang.
