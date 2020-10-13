@@ -79,7 +79,7 @@ to MIT Scheme.
 - eq?, returns true if the two values are equal
 - warning, returned in the case of a non-critical error
 - error, returned in the case of a critical error
-
+- eval, evaluates the specified function on the following arguments
 #### Function Execution Syntax
 The evaluation syntax for ZLang is as follows
 
@@ -127,3 +127,19 @@ the Lisp-gifted among us might flourish with this drop in the ever-expanding
 basin." She has lost her mind entirely. Given this stance, we are only going to
 implement the above primitives in Python, and implement the remainder of the
 language in this primitive ZLang.
+
+##### Implementation Model
+To implement ZLang in a language like Python, it is useful to first implement a
+smaller version of the language, then write the language's standard library in
+that reduced environment. In our case, we will label the reduced language
+micro-ZLang, or mZL for short. mZL consists of the above set of primitives and is
+implemented directly in Python. The most critical piece of mZL is the eval
+operator. It's the lynchpin that allows us to continue with exection in each
+iteration. The flow of control is as follows:
+
+- The runtime reads in the first ZLang statement of the input
+- eval is applied recursively until the statement has a car of ver, define, or
+  a value which isn't in the namespace
+- The remainder of the statement is returned to the output
+- The next ZLang statement is read in 
+
