@@ -143,3 +143,4 @@ iteration. The flow of control is as follows:
 - The remainder of the statement is returned to the output
 - The next ZLang statement is read in 
 
+More information can be found in the Implementation Guide.
