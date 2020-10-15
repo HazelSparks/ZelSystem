@@ -16,3 +16,11 @@ was added as well.
 ## Note for Tomorrow
 Set up of the source files as described in the Implementation guide. Start a
 user manual file in the documentation.
+
+# Day 3: Wednesday 14, Oct 2020 N/A
+No work done
+
+# Day 4: Thursday 15, Oct 2020 5:00-6:00pm
+Extended language modelling, and implementation guidelines, and finally broke
+ground on actual code-writing. Updated the Makefile, and fixed an extension
+error.
