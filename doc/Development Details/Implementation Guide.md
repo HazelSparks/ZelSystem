@@ -32,3 +32,13 @@ This is the true language ZLang, and it's written in ZLang. This implementation
 pattern allows for a cleaner syntax that's more focused on the language itself
 rather than the quirks of translation.
 
+### Complete list of mZL primitives, and their suggested implementation
+#### (), the empty list
+The empty list is to be implemented as a single table in the namespace,
+"()" : "()"
+
+#### **T**, Boolean truth
+The truth boolean is to be implemented in the namespace as "T" : True
+
+#### **F**, Boolean false
+The false boolean follows the above pattern
