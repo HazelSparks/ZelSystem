@@ -24,3 +24,7 @@ No work done
 Extended language modelling, and implementation guidelines, and finally broke
 ground on actual code-writing. Updated the Makefile, and fixed an extension
 error.
+
+# Day 5: Friday 16, Oct 2020 3:00-4:00pm
+Wrote the skeletons of the Python model, and laid down some testing strings.
+Worked on file IO and some extended documentation for implementation patterns.
