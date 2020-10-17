@@ -28,3 +28,8 @@ error.
 # Day 5: Friday 16, Oct 2020 3:00-4:00pm
 Wrote the skeletons of the Python model, and laid down some testing strings.
 Worked on file IO and some extended documentation for implementation patterns.
+
+# END OF WEEK 1
+## Total Time Completed: 10 Hours
+## Size of Project: 160kb
+## Sub-Systems Complete: 0
