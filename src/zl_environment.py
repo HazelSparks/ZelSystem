@@ -16,7 +16,8 @@ def import_prims():
         print("ZLang Primitives not found")
 
     prim_funcs = filter(lambda x: (x[0] == "_") or (x == 'init'), dir(zlprim))
-        
+
+    
 def import_stdlib():
     print("Processing Standard Library...")
     try:
