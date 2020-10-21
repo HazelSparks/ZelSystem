@@ -1,3 +1,5 @@
+import zl_primitives as prims
+
 def init():
     # Execute ZLang statements, including modifying the namespace
     print("Initialized ZLang runtime")
