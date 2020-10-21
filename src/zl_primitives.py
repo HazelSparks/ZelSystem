@@ -1,18 +1,21 @@
-def car(line):
-    # Get the car using string slicing, mind the parenthesis
-    return line.split()[0][1:]
+def car(linelist):
+    return linelist[0]
 
-def cdr(line):
-    # Making the cdr while maintain "list string" format
-    separator = ", "
-    return "(" + separator.join(line.split()[1:]).replace(separator, " ")
+def cdr(linelist):
+    return linelist[-1:]
 
-def atomq(line):
-    # Decide if the line is an atom
-    return (car(line) == "ver") and (len(cdr(line).split()) == 1)
+def atomq(linelist):
+    return (len(linelist) == 1) and (not isinstance(linelist[0], list))
 
-def eqq(line):
-    # Decide if two atoms are equal
-    return car(line) == car(cdr(line))
+def eqq(linelist1, linelist2):
+    return linelist1 == linelist2
 
+def cons(linelist1, linelist2):
+    return linelist1 + linelist2
+
+def nullq(linelist):
+    return linelist == ["()"]
+
+def ver(linelist):
+    return linelist
 

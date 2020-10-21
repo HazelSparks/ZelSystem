@@ -70,11 +70,11 @@ to MIT Scheme.
 - atomq, returns true if the value is an atom					IMPLEMENTED
 - car, returns the first element of a non-empty list				IMPLEMENTED
 - cdr, returns the remaining elements of a decapitated non-empty list		IMPLEMENTED
-- cons, places a value at the tail-end of a list
-- nullq, returns true if the value is the empty list
-- ver, short for verbatim, returns whatever it is passed without evaluation
+- cons, places a value at the front of a list	       		 		IMPLEMENTED
+- nullq, returns true if the value is the empty list				IMPLEMENTED
+- ver, short for verbatim, returns whatever it is passed without evaluation	IMPLEMENTED
 - lambda, substitutes arbitrary values into specific places
-- list, creates a list containing the arguments it's passed
+- list, creates a list containing the arguments it's passed			
 - cond, branches execution based on a boolean value
 - define, defines a variable with a list or an atom
 - eqq, returns true if the two values are equal					IMPLEMENTED
