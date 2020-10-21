@@ -6,3 +6,8 @@ and cdr function, working on interleaving the runtime and the evironment
 Ran into the first issue. Both the car and cdr functions have serious pathologies
 and needs intense testing and fixing. Tomorrow the plan is to set up a testing
 rig and produce a working car.
+
+# Day 3: Wednesday 21, Oct 2020 7:00-8:00pm
+Chose a standard framework for list processing. Construction of a
+"string-to-list" function is critical for continual development. Primitives
+are under full develop.
