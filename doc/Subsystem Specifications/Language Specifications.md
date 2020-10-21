@@ -77,7 +77,7 @@ to MIT Scheme.
 - list, creates a list containing the arguments it's passed
 - cond, branches execution based on a boolean value
 - define, defines a variable with a list or an atom
-- eqq, returns true if the two values are equal
+- eqq, returns true if the two values are equal					IMPLEMENTED
 - warning, returned in the case of a non-critical error
 - error, returned in the case of a critical error
 - eval, evaluates the specified function on the following arguments
