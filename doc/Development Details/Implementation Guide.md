@@ -32,6 +32,14 @@ This is the true language ZLang, and it's written in ZLang. This implementation
 pattern allows for a cleaner syntax that's more focused on the language itself
 rather than the quirks of translation.
 
+What is most critical to the mZL execution is a "string-to-list" function, which
+turns a string of parenthesis into a list of mZL statements. The full details
+of this function are to be placed
+
+## TODO
+# HERE 
+## TODO
+
 ### Complete list of mZL primitives, and their suggested implementation
 #### (), the empty list
 The empty list is to be implemented as a single table in the namespace,
@@ -42,3 +50,4 @@ The truth boolean is to be implemented in the namespace as "T" : True
 
 #### **F**, Boolean false
 The false boolean follows the above pattern
+

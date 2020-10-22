@@ -140,6 +140,7 @@ implemented directly in Python. The most critical piece of mZL is the eval
 operator. It's the lynchpin that allows us to continue with exection in each
 iteration. The flow of control is as follows:
 
+- The input string is converted into a list of ZLang statements
 - The runtime reads in the first ZLang statement of the input
 - eval is applied recursively until the statement has a car of ver, define, or
   a value which isn't in the namespace
