@@ -64,24 +64,24 @@ can be constructed using the **cons** function, to which reference will be made
 to MIT Scheme.
 
 #### Exhaustive List of Functions and Primitives (subject to change)
-- (), the empty list
-- **T**, the boolean truth value
-- **F**, the boolean false value
+- (), the empty list								IMPLEMENTED
+- **T**, the boolean truth value						IMPLEMENTED
+- **F**, the boolean false value						IMPLEMENTED
 - atomq, returns true if the value is an atom					IMPLEMENTED
 - car, returns the first element of a non-empty list				IMPLEMENTED
 - cdr, returns the remaining elements of a decapitated non-empty list		IMPLEMENTED
 - cons, places a value at the front of a list	       		 		IMPLEMENTED
 - nullq, returns true if the value is the empty list				IMPLEMENTED
 - ver, short for verbatim, returns whatever it is passed without evaluation	IMPLEMENTED
-- lambda, substitutes arbitrary values into specific places
-- list, creates a list containing the arguments it's passed			
-- cond, branches execution based on a boolean value
-- define, defines a variable with a list or an atom
+- lambda, substitutes arbitrary values into specific places	 		
+- list, creates a list containing the arguments it's passed			IMPLEMENTED
+- cond, branches execution based on a boolean value  				
+- define, defines a variable with a list or an atom				
 - eqq, returns true if the two values are equal					IMPLEMENTED
-- warning, returned in the case of a non-critical error
-- error, returned in the case of a critical error
-- eval, evaluates the specified function on the following arguments
-- envi, the environment, which is a list of pairs, name and definition
+- warning, returned in the case of a non-critical error				IMPLEMENTED
+- error, returned in the case of a critical error 				IMPLEMENTED
+- zleval, evaluates the specified function on the following arguments		
+- envi, the environment, which is a list of pairs, name and definition		
 
 #### Function Execution Syntax
 The evaluation syntax for ZLang is as follows
